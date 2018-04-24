@@ -1,0 +1,25 @@
+{
+  "name": "Freedium",
+  "description": "Read exclusive articles on Medium without limitation",
+  "author": "redphx",
+  "version": "1.0.0",
+  "manifest_version": 2,
+
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://medium.com/s/*"],
+      "run_at": "document_end",
+      "js": ["js/freedium.cs.js"]
+    }
+  ],
+
+  "permissions": [
+    "https://medium.com/*"
+  ]
+}
